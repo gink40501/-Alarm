@@ -24,13 +24,10 @@ namespace 鬧鐘
         public static extern IntPtr SendMessageW(IntPtr hWnd, int Msg, IntPtr wParam, IntPtr lParam);
         public void SetVol()
         {
-            
                 SendMessageW(p.Handle, WM_APPCOMMAND, p.Handle, (IntPtr)VOLUME_UP);
-            
         }
         public void SetVol_dowon()
         {
-            
                 SendMessageW(p.Handle, WM_APPCOMMAND, p.Handle, (IntPtr)VOLUME_DOWN);
         }
 
