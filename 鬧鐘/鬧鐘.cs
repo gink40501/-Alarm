@@ -28,6 +28,7 @@ namespace 鬧鐘
             InitializeComponent();
             notifyIcon = new NotifyIcon();//縮小視窗
             notifyIcon.Text = "開啟檔案";//顯示提示
+            button3.Enabled = false;
             notifyIcon.DoubleClick += new System.EventHandler(this.notifyIcon1_DoubleClick);
             closs_miss.Enabled = false;
             刪除.Enabled = false;
