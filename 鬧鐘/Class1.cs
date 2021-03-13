@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,65 +8,45 @@ using System.Threading.Tasks;
 
 namespace 鬧鐘
 {
-    class Alarm
+
+
+    public class cycle
     {
-        private List<string> h = new List<string>();//時
-        private List<string> m = new List<string>();//分
-        private List<string> week = new List<string>();//星期
-        private List<string> music = new List<string>();//音樂
-        public void add(string H, string M, string week)
+        //[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty]
+        private string[] week { get; set; }
+        [JsonProperty]
+        private DateTime dateTime { get; set; }
+        public cycle(DateTime date)
         {
-            h.Add(H);
-            m.Add(M);
-            this.week.Add(week);
+            dateTime = date;
         }
-        public void m_h_save(ref string[] H, ref string[] M, ref string[] WEEK)
+        public cycle(string[] WEEK)
         {
-            WEEK = week.ToArray();
-            H = h.ToArray();
-            M = m.ToArray();
+            week = WEEK;
         }
-        public int length
+        public object get_week_data()
         {
-            get=> h.Count;
-        }
-        public void delete(int i)
-        {
-            h.RemoveAt(i);
-            m.RemoveAt(i);
-            week.RemoveAt(i);
-        }
-        public bool ALARM(string H, string M, String week_1)
-        {
-
-
-            bool t_f = false;
-            for (int i = 0; i < h.Count; i++)
+            if (week == null)
             {
-                string WEEK = week[i];
-                string[] Week = WEEK.Split('_');
-                if (h[i] == H && m[i] == M)
-                {
-                    foreach (var j in Week)
-                        if (j == week_1)
-                        {
-                            t_f = true;
-                            break;
-                        }
-                    break;
-                }
+                return dateTime;
             }
-            return t_f;
-
+            else
+            {
+                return week;
+            }
         }
     }
 
     public class ALARM_3_1
     {
-        private int H;
-        private int M;
+        [JsonProperty]
+        private int H { get; set; }
+        [JsonProperty]
+        private int M { get; set; }
         public ALARM_3_1(int h, int m)
         {
+
             H = h;
             M = m;
         }
@@ -76,26 +58,52 @@ namespace 鬧鐘
         {
             return M;
         }
+        public override bool Equals(object obj)//比較
+        {
+            if ((obj == null) || !this.GetType().Equals(obj.GetType()))
+            {
+                return false;
+            }
+            else
+            {
+                ALARM_3_1 p = (ALARM_3_1)obj;
+                return (H == p.H) && (M == p.M);
+            }
+        }
+
     }
 
     public class ALARM
     {
+        [JsonProperty]
         private string must;
-        private bool open_off;
-        private string[] week;
+        public bool open_off;
+        [JsonProperty]
+        private cycle Cycle;
+        [JsonProperty]
         private ALARM_3_1 alarm;
+
         
-        public ALARM(int m, int hour, string MUST, bool t_f, string[] WEEK)
+        public ALARM(int m, int hour, string MUST, bool t_f, DateTime dateTime )
         {
             alarm = new ALARM_3_1(m, hour);
             must = MUST;
             open_off = t_f;
-            week = WEEK;
+            this.Cycle = new cycle(dateTime);
+            
+        }
+        
+        public ALARM(int m, int hour, string MUST, bool t_f, string[] week)
+        {
+            alarm = new ALARM_3_1(m, hour);
+            must = MUST;
+            open_off = t_f;
+            this.Cycle = new cycle(week);
         }
 
-        public ALARM_3_1 get_alarm_time(ref string[] WEEK)//回傳設定的鬧鐘時間
+        public ALARM_3_1 get_alarm_time(ref cycle Cycle)//回傳設定的鬧鐘時間
         {
-            WEEK=week;
+            this.Cycle = Cycle;
             return alarm;
         }
         public bool get_open_off()//回傳鬧鐘(現在狀態)
@@ -116,19 +124,115 @@ namespace 鬧鐘
             must = must_1;
         }
 
-        public bool Alarm()
+        public bool Alarm_()//核對時間是否一致
         {
-            string now_Week = DateTime.Now.DayOfWeek.ToString();
-            bool week_true_false = !(Array.IndexOf(week, now_Week) == -1);
-            ALARM_3_1 now_time = new ALARM_3_1(DateTime.Now.Minute, DateTime.Now.Hour);//核對時間是否到時間
-            if (open_off)
+            ALARM_3_1 now_time = new ALARM_3_1(DateTime.Now.Hour, DateTime.Now.Minute);//核對時間是否到時間
+            if (Cycle.get_week_data().GetType().Name.ToString()== "DateTime")
             {
-                if (now_time == alarm && week_true_false && open_off)
-                    return true;
+                DateTime 設定 = (DateTime)Cycle.get_week_data();
+                string date = DateTime.Now.Date.ToString();//現在的日期
+                string DATA = 設定.Date.ToString();//設定的日期
+                if (date == DATA)
+                {
+                    if (alarm.Equals(now_time) && open_off)
+                        return true;
+                }
             }
+            else
+            {
+                string now_Week = DateTime.Now.DayOfWeek.ToString();//now星期
+                string[] week = (string[])Cycle.get_week_data();
+                bool week_true_false = !(Array.IndexOf(week, now_Week) == -1);
+                if (open_off)
+                {
+                    if (alarm.Equals(now_time) && week_true_false && open_off)
+                        return true;
+                }
+            }
+
             return false;
+        }
+        public string alarm_all_value()//字串輸出
+        {
+            string h = alarm.return_hour().ToString();
+            string m = alarm.return_m().ToString();
+            string week = "";
+            if (Cycle == null)
+                return "";
+            if (Cycle.get_week_data().GetType() == typeof(string[]))
+            {
+                string[] WEEK;
+                WEEK = (string[])Cycle.get_week_data();
+                foreach (var i in WEEK)
+                    week = week + i + " ";
+            }
+            else
+            {
+                DateTime DATA = (DateTime)Cycle.get_week_data();
+
+                week = DATA.Year.ToString() +"/"+DATA.Month.ToString()+"/"+DATA.Day.ToString();
+            }
+
+            return h + ":" + m + "   " + week + "<" + must + ">";
+        }
+        public void recovery()
+        {
+            open_off = true;
         }
 
     }
+    public class Music_database //音樂的資料庫的類別
+    {
+        [JsonProperty]
+        private string name { get; set; }//名稱
+        [JsonProperty]
+        private string position { get; set; }//位置
+        public Music_database(string NAME, string POSITION)
+        {
+            name = NAME;
+            position = POSITION;
+        }
+        public string GetName()
+        {
+            return name;
+        }
+        public string GetPosition()
+        {
+            return position;
+        }
+    }
+
+
+    public class music_management//音樂管理器
+    {
+        public List<Music_database> Databases;//全部的音樂
+        public music_management(List<Music_database> total_music)//將音樂的資料輸入近來
+        {
+            Databases = total_music;
+        }
+        public Music_database search_name(string music_name)//收尋功能名稱
+        {
+            foreach (var i in Databases)
+                if (i.GetName() == music_name)//收尋音樂的名稱
+                    return i;//回傳收尋到的整個物件
+            return null;//沒收尋到就回傳空直
+        }
+        public void Add_music(Music_database music)//新增音樂
+        {
+            // Music_database music = new Music_database(NAME, POSITION);
+            Databases.Add(music);
+        }
+
+        public void delete_music(string music_name)//刪除音樂
+        {
+            if (search_name(music_name) != null)
+                Databases.Remove(search_name(music_name));//刪除
+        }
+        public List<Music_database> totoal_music()//把所有音樂的資料庫回傳回去
+        {
+            return Databases;
+        }
+    }
+
 
 }
