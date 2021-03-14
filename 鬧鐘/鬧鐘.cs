@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -82,11 +83,11 @@ namespace 鬧鐘
         {
            
             StreamWriter sw = new StreamWriter("鬧鐘儲存資料.json");
-
+            //Process.Start("https://www.youtube.com/watch?v=rGPXugD0ekU&ab_channel=%E8%A6%AA%E8%A6%AA2o%E9%9F%B3%E6%A8%82L%C3%AEv%C3%8B%E3%80%90%E4%B8%AD%E6%96%87%E9%9F%B3%E6%A8%82%E3%80%91/");//開啟網頁
             //JsonSerializerSettings jsetting = new JsonSerializerSettings();
             //jsetting.NullValueHandling = NullValueHandling.Ignore;
             //Formatting.Indented
-            var alarm = JsonConvert.SerializeObject(Alam); //SerializeObject(Alam);//序列化存成字串
+            var alarm = JsonConvert.SerializeObject(Alam, Formatting.Indented); //SerializeObject(Alam);//序列化存成字串
             sw.Write(alarm);//寫入檔案
             sw.Close();//關閉檔案
 
@@ -128,8 +129,8 @@ namespace 鬧鐘
                         var route= management.search_name(i.get_must());
                         player.SoundLocation=route.GetPosition();//把音樂路徑匯入裡面
                         player.PlayLooping();
-                        on_off = false;
                         closs_miss.Enabled = true;
+                        this.Show();
                     }
                 }
         }
@@ -194,10 +195,6 @@ namespace 鬧鐘
             for(int i=0; i<70/2;i++)
                 sound.SetVol_dowon();
             player.Stop();
-            foreach(var i in Alam)
-                if (i.Alarm_()==true)
-                    i.open_off = false;
-            on_off = true;
             closs_miss.Enabled = false;
         }
 

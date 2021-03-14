@@ -42,46 +42,6 @@ namespace 鬧鐘
         }
     }
 
-    public class ALARM_3_1
-    {
-
-        [JsonProperty]
-        private int H { get; set; }
-        [JsonProperty]
-        private int M { get; set; }
-        public ALARM_3_1()
-        {
-
-        }
-        public ALARM_3_1(int h, int m)
-        {
-
-            H = h;
-            M = m;
-        }
-        public int return_hour()
-        {
-            return H;
-        }
-        public int return_m()
-        {
-            return M;
-        }
-        public override bool Equals(object obj)//比較
-        {
-            if ((obj == null) || !this.GetType().Equals(obj.GetType()))
-            {
-                return false;
-            }
-            else
-            {
-                ALARM_3_1 p = (ALARM_3_1)obj;
-                return (H == p.H) && (M == p.M);
-            }
-        }
-
-    }
-
     public class ALARM
     {
         [JsonProperty]
@@ -90,35 +50,41 @@ namespace 鬧鐘
         [JsonProperty]
         private cycle Cycle;
         [JsonProperty]
-        private ALARM_3_1 alarm;
-        
-
+        private int Hour;
+        [JsonProperty]
+        private int Minute;
+        [JsonProperty]
+        private int sec=0;
         public ALARM()
         {
 
         }
 
-        public ALARM(int m, int hour, string MUST, bool t_f, DateTime dateTime)
+        public ALARM(int hour, int m, string MUST, bool t_f, DateTime dateTime)
         {
-            alarm = new ALARM_3_1(m, hour);
+            Hour = hour;
+            Minute = m;
+            //alarm = new ALARM_3_1(m, hour);
             must = MUST;
             open_off = t_f;
             this.Cycle = new cycle(dateTime);
 
         }
 
-        public ALARM(int m, int hour, string MUST, bool t_f, string[] week)
+        public ALARM(int hour, int m, string MUST, bool t_f, string[] week)
         {
-            alarm = new ALARM_3_1(m, hour);
+            Hour = hour;
+            Minute = m;
+            //alarm = new ALARM_3_1(m, hour);
             must = MUST;
             open_off = t_f;
             this.Cycle = new cycle(week);
         }
 
-        public ALARM_3_1 get_alarm_time(ref cycle Cycle)//回傳設定的鬧鐘時間
+        public void get_alarm_time(ref int Hour,ref int Minute)//回傳設定的鬧鐘時間
         {
-            this.Cycle = Cycle;
-            return alarm;
+            Hour = this.Hour;
+            Minute = this.Minute;
         }
         public bool get_open_off()//回傳鬧鐘(現在狀態)
         {
@@ -140,7 +106,10 @@ namespace 鬧鐘
 
         public bool Alarm_()//核對時間是否一致
         {
-            ALARM_3_1 now_time = new ALARM_3_1(DateTime.Now.Hour, DateTime.Now.Minute);//核對時間是否到時間
+           //核對時間是否到時間
+            int NOW_Hour=DateTime.Now.Hour;
+            int NOW_Minute = DateTime.Now.Minute;
+            int NOW_Sec = DateTime.Now.Second;
             if (Cycle.get_week_data().GetType().Name.ToString() == "DateTime")
             {
                 DateTime 設定 = (DateTime)Cycle.get_week_data();
@@ -148,18 +117,19 @@ namespace 鬧鐘
                 string DATA = 設定.Date.ToString();//設定的日期
                 if (date == DATA)
                 {
-                    if (alarm.Equals(now_time) && open_off)
+                    if (NOW_Hour==Hour &&NOW_Minute==Minute&& NOW_Sec==sec)
                         return true;
                 }
             }
             else
             {
+                
                 string now_Week = DateTime.Now.DayOfWeek.ToString();//now星期
                 string[] week = (string[])Cycle.get_week_data();
                 bool week_true_false = !(Array.IndexOf(week, now_Week) == -1);
                 if (open_off)
                 {
-                    if (alarm.Equals(now_time) && week_true_false && open_off)
+                    if (NOW_Hour == Hour && NOW_Minute == Minute && NOW_Sec == sec)
                         return true;
                 }
             }
@@ -168,8 +138,8 @@ namespace 鬧鐘
         }
         public string alarm_all_value()//字串輸出
         {
-            string h = alarm.return_hour().ToString();
-            string m = alarm.return_m().ToString();
+            string h = Hour.ToString();
+            string m = Minute.ToString();
             string week = "";
             if (Cycle == null)
                 return "";
