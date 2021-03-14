@@ -28,11 +28,13 @@ namespace 鬧鐘
             InitializeComponent();
             notifyIcon = new NotifyIcon();//縮小視窗
             notifyIcon.Text = "開啟檔案";
-            button3.Enabled = false;
+            //button3.Enabled = false;
+            notifyIcon.Icon = new Icon("amx5w-75dup-001 .ico");
             notifyIcon.DoubleClick += new System.EventHandler(this.notifyIcon1_DoubleClick);
             closs_miss.Enabled = false;
             刪除.Enabled = false;
             comboBox1.Text = comboBox1.Items[0].ToString();
+            日曆.Text = DateTime.Now.Date.ToString();
         }
 
         private void notifyIcon1_DoubleClick(object sender, EventArgs e)
@@ -121,7 +123,7 @@ namespace 鬧鐘
                 {
                     if (on_off==true) {
                         sound.SetVol();
-                        for (int j=0;j<50;j=j+2)//把聲音大到音量100
+                        for (int j=0;j<65;j=j+2)//把聲音大到音量100
                             sound.SetVol();
                         var route= management.search_name(i.get_must());
                         player.SoundLocation=route.GetPosition();//把音樂路徑匯入裡面

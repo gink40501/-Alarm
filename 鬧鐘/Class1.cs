@@ -91,6 +91,7 @@ namespace 鬧鐘
         private cycle Cycle;
         [JsonProperty]
         private ALARM_3_1 alarm;
+        
 
         public ALARM()
         {
