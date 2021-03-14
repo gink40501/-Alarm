@@ -17,6 +17,10 @@ namespace 鬧鐘
         private string[] week { get; set; }
         [JsonProperty]
         private DateTime dateTime { get; set; }
+        public cycle()
+        {
+
+        }
         public cycle(DateTime date)
         {
             dateTime = date;
@@ -40,10 +44,15 @@ namespace 鬧鐘
 
     public class ALARM_3_1
     {
+
         [JsonProperty]
         private int H { get; set; }
         [JsonProperty]
         private int M { get; set; }
+        public ALARM_3_1()
+        {
+
+        }
         public ALARM_3_1(int h, int m)
         {
 
@@ -83,16 +92,20 @@ namespace 鬧鐘
         [JsonProperty]
         private ALARM_3_1 alarm;
 
-        
-        public ALARM(int m, int hour, string MUST, bool t_f, DateTime dateTime )
+        public ALARM()
+        {
+
+        }
+
+        public ALARM(int m, int hour, string MUST, bool t_f, DateTime dateTime)
         {
             alarm = new ALARM_3_1(m, hour);
             must = MUST;
             open_off = t_f;
             this.Cycle = new cycle(dateTime);
-            
+
         }
-        
+
         public ALARM(int m, int hour, string MUST, bool t_f, string[] week)
         {
             alarm = new ALARM_3_1(m, hour);
@@ -127,7 +140,7 @@ namespace 鬧鐘
         public bool Alarm_()//核對時間是否一致
         {
             ALARM_3_1 now_time = new ALARM_3_1(DateTime.Now.Hour, DateTime.Now.Minute);//核對時間是否到時間
-            if (Cycle.get_week_data().GetType().Name.ToString()== "DateTime")
+            if (Cycle.get_week_data().GetType().Name.ToString() == "DateTime")
             {
                 DateTime 設定 = (DateTime)Cycle.get_week_data();
                 string date = DateTime.Now.Date.ToString();//現在的日期
@@ -170,7 +183,7 @@ namespace 鬧鐘
             {
                 DateTime DATA = (DateTime)Cycle.get_week_data();
 
-                week = DATA.Year.ToString() +"/"+DATA.Month.ToString()+"/"+DATA.Day.ToString();
+                week = DATA.Year.ToString() + "/" + DATA.Month.ToString() + "/" + DATA.Day.ToString();
             }
 
             return h + ":" + m + "   " + week + "<" + must + ">";
