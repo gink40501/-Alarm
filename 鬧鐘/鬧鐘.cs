@@ -36,6 +36,7 @@ namespace 鬧鐘
             刪除.Enabled = false;
             comboBox1.Text = comboBox1.Items[0].ToString();
             日曆.Text = DateTime.Now.Date.ToString();
+           // ShowDialog();
         }
 
         private void notifyIcon1_DoubleClick(object sender, EventArgs e)

@@ -13,6 +13,7 @@ namespace 鬧鐘
     public class cycle
     {
         //[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+
         [JsonProperty]
         private string[] week { get; set; }
         [JsonProperty]
@@ -196,6 +197,7 @@ namespace 鬧鐘
         }
         public Music_database search_name(string music_name)//收尋功能名稱
         {
+           
             foreach (var i in Databases)
                 if (i.GetName() == music_name)//收尋音樂的名稱
                     return i;//回傳收尋到的整個物件
