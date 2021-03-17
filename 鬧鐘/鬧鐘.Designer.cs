@@ -50,72 +50,72 @@ namespace 鬧鐘
             this.日曆 = new System.Windows.Forms.DateTimePicker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.button24 = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
-            this.button30 = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.button31 = new System.Windows.Forms.Button();
-            this.button32 = new System.Windows.Forms.Button();
-            this.button33 = new System.Windows.Forms.Button();
-            this.button34 = new System.Windows.Forms.Button();
-            this.button35 = new System.Windows.Forms.Button();
-            this.button36 = new System.Windows.Forms.Button();
-            this.button37 = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.button38 = new System.Windows.Forms.Button();
-            this.button39 = new System.Windows.Forms.Button();
-            this.button40 = new System.Windows.Forms.Button();
-            this.button41 = new System.Windows.Forms.Button();
-            this.button42 = new System.Windows.Forms.Button();
-            this.button43 = new System.Windows.Forms.Button();
-            this.button44 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.YOUR = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.YOUR = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.week_42 = new System.Windows.Forms.Button();
+            this.week_41 = new System.Windows.Forms.Button();
+            this.week_40 = new System.Windows.Forms.Button();
+            this.week_39 = new System.Windows.Forms.Button();
+            this.week_38 = new System.Windows.Forms.Button();
+            this.week_37 = new System.Windows.Forms.Button();
+            this.week_36 = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.week_35 = new System.Windows.Forms.Button();
+            this.week_34 = new System.Windows.Forms.Button();
+            this.week_33 = new System.Windows.Forms.Button();
+            this.week_32 = new System.Windows.Forms.Button();
+            this.week_31 = new System.Windows.Forms.Button();
+            this.week_30 = new System.Windows.Forms.Button();
+            this.week_29 = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.week_28 = new System.Windows.Forms.Button();
+            this.week_27 = new System.Windows.Forms.Button();
+            this.week_26 = new System.Windows.Forms.Button();
+            this.week_25 = new System.Windows.Forms.Button();
+            this.week_24 = new System.Windows.Forms.Button();
+            this.week_23 = new System.Windows.Forms.Button();
+            this.week_22 = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.week_21 = new System.Windows.Forms.Button();
+            this.week_20 = new System.Windows.Forms.Button();
+            this.week_19 = new System.Windows.Forms.Button();
+            this.week_18 = new System.Windows.Forms.Button();
+            this.week_17 = new System.Windows.Forms.Button();
+            this.week_16 = new System.Windows.Forms.Button();
+            this.week_15 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.week_14 = new System.Windows.Forms.Button();
+            this.week_13 = new System.Windows.Forms.Button();
+            this.week_12 = new System.Windows.Forms.Button();
+            this.week_11 = new System.Windows.Forms.Button();
+            this.week_10 = new System.Windows.Forms.Button();
+            this.week_9 = new System.Windows.Forms.Button();
+            this.week_8 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.week_7 = new System.Windows.Forms.Button();
+            this.week_6 = new System.Windows.Forms.Button();
+            this.week_5 = new System.Windows.Forms.Button();
+            this.week_4 = new System.Windows.Forms.Button();
+            this.week_3 = new System.Windows.Forms.Button();
+            this.week_2 = new System.Windows.Forms.Button();
+            this.week_1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // listBox1
@@ -332,475 +332,93 @@ namespace 鬧鐘
             this.panel1.Size = new System.Drawing.Size(538, 395);
             this.panel1.TabIndex = 17;
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(3, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(54, 38);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.button9);
-            this.panel2.Controls.Add(this.button8);
-            this.panel2.Controls.Add(this.button7);
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Location = new System.Drawing.Point(16, 117);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(512, 41);
-            this.panel2.TabIndex = 1;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(78, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(54, 38);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(153, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(54, 38);
-            this.button5.TabIndex = 3;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(228, 3);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(54, 38);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(303, 3);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(54, 38);
-            this.button7.TabIndex = 3;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(378, 3);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(54, 38);
-            this.button8.TabIndex = 3;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(453, 3);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(54, 38);
-            this.button9.TabIndex = 4;
-            this.button9.Text = "button9";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.button10);
-            this.panel3.Controls.Add(this.button11);
-            this.panel3.Controls.Add(this.button12);
-            this.panel3.Controls.Add(this.button13);
-            this.panel3.Controls.Add(this.button14);
-            this.panel3.Controls.Add(this.button15);
-            this.panel3.Controls.Add(this.button16);
-            this.panel3.Location = new System.Drawing.Point(16, 164);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(512, 41);
-            this.panel3.TabIndex = 5;
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(453, 3);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(54, 38);
-            this.button10.TabIndex = 4;
-            this.button10.Text = "button10";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(378, 3);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(54, 38);
-            this.button11.TabIndex = 3;
-            this.button11.Text = "button11";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(303, 3);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(54, 38);
-            this.button12.TabIndex = 3;
-            this.button12.Text = "button12";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // button13
-            // 
-            this.button13.Location = new System.Drawing.Point(228, 3);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(54, 38);
-            this.button13.TabIndex = 3;
-            this.button13.Text = "button13";
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // button14
-            // 
-            this.button14.Location = new System.Drawing.Point(153, 3);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(54, 38);
-            this.button14.TabIndex = 3;
-            this.button14.Text = "button14";
-            this.button14.UseVisualStyleBackColor = true;
-            // 
-            // button15
-            // 
-            this.button15.Location = new System.Drawing.Point(78, 3);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(54, 38);
-            this.button15.TabIndex = 2;
-            this.button15.Text = "button15";
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // button16
-            // 
-            this.button16.Location = new System.Drawing.Point(3, 3);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(57, 38);
-            this.button16.TabIndex = 0;
-            this.button16.Text = "button16";
-            this.button16.UseVisualStyleBackColor = true;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.button17);
-            this.panel4.Controls.Add(this.button18);
-            this.panel4.Controls.Add(this.button19);
-            this.panel4.Controls.Add(this.button20);
-            this.panel4.Controls.Add(this.button21);
-            this.panel4.Controls.Add(this.button22);
-            this.panel4.Controls.Add(this.button23);
-            this.panel4.Location = new System.Drawing.Point(16, 211);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(512, 41);
-            this.panel4.TabIndex = 6;
-            // 
-            // button17
-            // 
-            this.button17.Location = new System.Drawing.Point(453, 3);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(54, 38);
-            this.button17.TabIndex = 4;
-            this.button17.Text = "button17";
-            this.button17.UseVisualStyleBackColor = true;
-            // 
-            // button18
-            // 
-            this.button18.Location = new System.Drawing.Point(378, 3);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(54, 38);
-            this.button18.TabIndex = 3;
-            this.button18.Text = "button18";
-            this.button18.UseVisualStyleBackColor = true;
-            // 
-            // button19
-            // 
-            this.button19.Location = new System.Drawing.Point(303, 3);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(54, 38);
-            this.button19.TabIndex = 3;
-            this.button19.Text = "button19";
-            this.button19.UseVisualStyleBackColor = true;
-            // 
-            // button20
-            // 
-            this.button20.Location = new System.Drawing.Point(228, 3);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(54, 38);
-            this.button20.TabIndex = 3;
-            this.button20.Text = "button20";
-            this.button20.UseVisualStyleBackColor = true;
-            // 
-            // button21
-            // 
-            this.button21.Location = new System.Drawing.Point(153, 3);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(54, 38);
-            this.button21.TabIndex = 3;
-            this.button21.Text = "button21";
-            this.button21.UseVisualStyleBackColor = true;
-            // 
-            // button22
-            // 
-            this.button22.Location = new System.Drawing.Point(78, 3);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(54, 38);
-            this.button22.TabIndex = 2;
-            this.button22.Text = "button22";
-            this.button22.UseVisualStyleBackColor = true;
-            // 
-            // button23
-            // 
-            this.button23.Location = new System.Drawing.Point(3, 3);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(54, 38);
-            this.button23.TabIndex = 0;
-            this.button23.Text = "button23";
-            this.button23.UseVisualStyleBackColor = true;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.button24);
-            this.panel5.Controls.Add(this.button25);
-            this.panel5.Controls.Add(this.button26);
-            this.panel5.Controls.Add(this.button27);
-            this.panel5.Controls.Add(this.button28);
-            this.panel5.Controls.Add(this.button29);
-            this.panel5.Controls.Add(this.button30);
-            this.panel5.Location = new System.Drawing.Point(16, 258);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(512, 41);
-            this.panel5.TabIndex = 7;
-            // 
-            // button24
-            // 
-            this.button24.Location = new System.Drawing.Point(453, 3);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(54, 38);
-            this.button24.TabIndex = 4;
-            this.button24.Text = "button24";
-            this.button24.UseVisualStyleBackColor = true;
-            // 
-            // button25
-            // 
-            this.button25.Location = new System.Drawing.Point(378, 3);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(54, 38);
-            this.button25.TabIndex = 3;
-            this.button25.Text = "button25";
-            this.button25.UseVisualStyleBackColor = true;
-            // 
-            // button26
-            // 
-            this.button26.Location = new System.Drawing.Point(303, 3);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(54, 38);
-            this.button26.TabIndex = 3;
-            this.button26.Text = "button26";
-            this.button26.UseVisualStyleBackColor = true;
-            // 
-            // button27
-            // 
-            this.button27.Location = new System.Drawing.Point(228, 3);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(54, 38);
-            this.button27.TabIndex = 3;
-            this.button27.Text = "button27";
-            this.button27.UseVisualStyleBackColor = true;
-            // 
-            // button28
-            // 
-            this.button28.Location = new System.Drawing.Point(153, 3);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(54, 38);
-            this.button28.TabIndex = 3;
-            this.button28.Text = "button28";
-            this.button28.UseVisualStyleBackColor = true;
-            // 
-            // button29
-            // 
-            this.button29.Location = new System.Drawing.Point(78, 3);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(54, 38);
-            this.button29.TabIndex = 2;
-            this.button29.Text = "button29";
-            this.button29.UseVisualStyleBackColor = true;
-            // 
-            // button30
-            // 
-            this.button30.Location = new System.Drawing.Point(0, 3);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(57, 38);
-            this.button30.TabIndex = 0;
-            this.button30.Text = "button30";
-            this.button30.UseVisualStyleBackColor = true;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.button31);
-            this.panel6.Controls.Add(this.button32);
-            this.panel6.Controls.Add(this.button33);
-            this.panel6.Controls.Add(this.button34);
-            this.panel6.Controls.Add(this.button35);
-            this.panel6.Controls.Add(this.button36);
-            this.panel6.Controls.Add(this.button37);
-            this.panel6.Location = new System.Drawing.Point(16, 302);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(512, 41);
-            this.panel6.TabIndex = 8;
-            // 
-            // button31
-            // 
-            this.button31.Location = new System.Drawing.Point(453, 3);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(54, 38);
-            this.button31.TabIndex = 4;
-            this.button31.Text = "button31";
-            this.button31.UseVisualStyleBackColor = true;
-            // 
-            // button32
-            // 
-            this.button32.Location = new System.Drawing.Point(378, 3);
-            this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(54, 38);
-            this.button32.TabIndex = 3;
-            this.button32.Text = "button32";
-            this.button32.UseVisualStyleBackColor = true;
-            // 
-            // button33
-            // 
-            this.button33.Location = new System.Drawing.Point(303, 3);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(54, 38);
-            this.button33.TabIndex = 3;
-            this.button33.Text = "button33";
-            this.button33.UseVisualStyleBackColor = true;
-            // 
-            // button34
-            // 
-            this.button34.Location = new System.Drawing.Point(228, 3);
-            this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(54, 38);
-            this.button34.TabIndex = 3;
-            this.button34.Text = "button34";
-            this.button34.UseVisualStyleBackColor = true;
-            // 
-            // button35
-            // 
-            this.button35.Location = new System.Drawing.Point(153, 3);
-            this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(54, 38);
-            this.button35.TabIndex = 3;
-            this.button35.Text = "button35";
-            this.button35.UseVisualStyleBackColor = true;
-            // 
-            // button36
-            // 
-            this.button36.Location = new System.Drawing.Point(78, 3);
-            this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(54, 38);
-            this.button36.TabIndex = 2;
-            this.button36.Text = "button36";
-            this.button36.UseVisualStyleBackColor = true;
-            // 
-            // button37
-            // 
-            this.button37.Location = new System.Drawing.Point(3, 3);
-            this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(54, 38);
-            this.button37.TabIndex = 0;
-            this.button37.Text = "button37";
-            this.button37.UseVisualStyleBackColor = true;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.button38);
-            this.panel7.Controls.Add(this.button39);
-            this.panel7.Controls.Add(this.button40);
-            this.panel7.Controls.Add(this.button41);
-            this.panel7.Controls.Add(this.button42);
-            this.panel7.Controls.Add(this.button43);
-            this.panel7.Controls.Add(this.button44);
-            this.panel7.Location = new System.Drawing.Point(16, 349);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(512, 41);
-            this.panel7.TabIndex = 9;
-            // 
-            // button38
-            // 
-            this.button38.Location = new System.Drawing.Point(453, 3);
-            this.button38.Name = "button38";
-            this.button38.Size = new System.Drawing.Size(54, 38);
-            this.button38.TabIndex = 4;
-            this.button38.Text = "button38";
-            this.button38.UseVisualStyleBackColor = true;
-            // 
-            // button39
-            // 
-            this.button39.Location = new System.Drawing.Point(378, 3);
-            this.button39.Name = "button39";
-            this.button39.Size = new System.Drawing.Size(54, 38);
-            this.button39.TabIndex = 3;
-            this.button39.Text = "button39";
-            this.button39.UseVisualStyleBackColor = true;
-            // 
-            // button40
-            // 
-            this.button40.Location = new System.Drawing.Point(303, 3);
-            this.button40.Name = "button40";
-            this.button40.Size = new System.Drawing.Size(54, 38);
-            this.button40.TabIndex = 3;
-            this.button40.Text = "button40";
-            this.button40.UseVisualStyleBackColor = true;
-            // 
-            // button41
-            // 
-            this.button41.Location = new System.Drawing.Point(228, 3);
-            this.button41.Name = "button41";
-            this.button41.Size = new System.Drawing.Size(54, 38);
-            this.button41.TabIndex = 3;
-            this.button41.Text = "button41";
-            this.button41.UseVisualStyleBackColor = true;
-            // 
-            // button42
-            // 
-            this.button42.Location = new System.Drawing.Point(153, 3);
-            this.button42.Name = "button42";
-            this.button42.Size = new System.Drawing.Size(54, 38);
-            this.button42.TabIndex = 3;
-            this.button42.Text = "button42";
-            this.button42.UseVisualStyleBackColor = true;
-            // 
-            // button43
-            // 
-            this.button43.Location = new System.Drawing.Point(78, 3);
-            this.button43.Name = "button43";
-            this.button43.Size = new System.Drawing.Size(54, 38);
-            this.button43.TabIndex = 2;
-            this.button43.Text = "button43";
-            this.button43.UseVisualStyleBackColor = true;
-            // 
-            // button44
-            // 
-            this.button44.Location = new System.Drawing.Point(3, 3);
-            this.button44.Name = "button44";
-            this.button44.Size = new System.Drawing.Size(54, 38);
-            this.button44.TabIndex = 0;
-            this.button44.Text = "button44";
-            this.button44.UseVisualStyleBackColor = true;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(19, 26);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 26);
-            this.comboBox2.TabIndex = 10;
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label13.Location = new System.Drawing.Point(404, 80);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(27, 18);
+            this.label13.TabIndex = 20;
+            this.label13.Text = "六";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label12.Location = new System.Drawing.Point(329, 80);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(27, 18);
+            this.label12.TabIndex = 19;
+            this.label12.Text = "五";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label11.Location = new System.Drawing.Point(254, 80);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(27, 18);
+            this.label11.TabIndex = 18;
+            this.label11.Text = "四";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label10.Location = new System.Drawing.Point(179, 80);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(27, 18);
+            this.label10.TabIndex = 17;
+            this.label10.Text = "三";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label9.Location = new System.Drawing.Point(104, 80);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(27, 18);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "二";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label8.Location = new System.Drawing.Point(29, 80);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(27, 18);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "一";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label6.Location = new System.Drawing.Point(479, 80);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(27, 18);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "日";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(334, 29);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(26, 18);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "月";
+            // 
+            // YOUR
+            // 
+            this.YOUR.AutoSize = true;
+            this.YOUR.Location = new System.Drawing.Point(146, 29);
+            this.YOUR.Name = "YOUR";
+            this.YOUR.Size = new System.Drawing.Size(26, 18);
+            this.YOUR.TabIndex = 12;
+            this.YOUR.Text = "年";
             // 
             // comboBox3
             // 
@@ -826,93 +444,476 @@ namespace 鬧鐘
             this.comboBox3.Size = new System.Drawing.Size(121, 26);
             this.comboBox3.TabIndex = 11;
             // 
-            // YOUR
+            // comboBox2
             // 
-            this.YOUR.AutoSize = true;
-            this.YOUR.Location = new System.Drawing.Point(146, 29);
-            this.YOUR.Name = "YOUR";
-            this.YOUR.Size = new System.Drawing.Size(26, 18);
-            this.YOUR.TabIndex = 12;
-            this.YOUR.Text = "年";
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(19, 26);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 26);
+            this.comboBox2.TabIndex = 10;
             // 
-            // label7
+            // panel7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(334, 29);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(26, 18);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "月";
+            this.panel7.Controls.Add(this.week_42);
+            this.panel7.Controls.Add(this.week_41);
+            this.panel7.Controls.Add(this.week_40);
+            this.panel7.Controls.Add(this.week_39);
+            this.panel7.Controls.Add(this.week_38);
+            this.panel7.Controls.Add(this.week_37);
+            this.panel7.Controls.Add(this.week_36);
+            this.panel7.Location = new System.Drawing.Point(16, 349);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(512, 41);
+            this.panel7.TabIndex = 9;
             // 
-            // label6
+            // week_42
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label6.Location = new System.Drawing.Point(34, 96);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(27, 18);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "日";
+            this.week_42.Location = new System.Drawing.Point(453, 3);
+            this.week_42.Name = "week_42";
+            this.week_42.Size = new System.Drawing.Size(54, 38);
+            this.week_42.TabIndex = 4;
+            this.week_42.Text = "button38";
+            this.week_42.UseVisualStyleBackColor = true;
             // 
-            // label8
+            // week_41
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label8.Location = new System.Drawing.Point(109, 96);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(27, 18);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "一";
+            this.week_41.Location = new System.Drawing.Point(378, 3);
+            this.week_41.Name = "week_41";
+            this.week_41.Size = new System.Drawing.Size(54, 38);
+            this.week_41.TabIndex = 3;
+            this.week_41.Text = "button39";
+            this.week_41.UseVisualStyleBackColor = true;
             // 
-            // label9
+            // week_40
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label9.Location = new System.Drawing.Point(184, 96);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(27, 18);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "二";
+            this.week_40.Location = new System.Drawing.Point(303, 3);
+            this.week_40.Name = "week_40";
+            this.week_40.Size = new System.Drawing.Size(54, 38);
+            this.week_40.TabIndex = 3;
+            this.week_40.Text = "button40";
+            this.week_40.UseVisualStyleBackColor = true;
             // 
-            // label10
+            // week_39
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label10.Location = new System.Drawing.Point(259, 96);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(27, 18);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "三";
+            this.week_39.Location = new System.Drawing.Point(228, 3);
+            this.week_39.Name = "week_39";
+            this.week_39.Size = new System.Drawing.Size(54, 38);
+            this.week_39.TabIndex = 3;
+            this.week_39.Text = "button41";
+            this.week_39.UseVisualStyleBackColor = true;
             // 
-            // label11
+            // week_38
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label11.Location = new System.Drawing.Point(334, 96);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(27, 18);
-            this.label11.TabIndex = 18;
-            this.label11.Text = "四";
+            this.week_38.Location = new System.Drawing.Point(153, 3);
+            this.week_38.Name = "week_38";
+            this.week_38.Size = new System.Drawing.Size(54, 38);
+            this.week_38.TabIndex = 3;
+            this.week_38.Text = "button42";
+            this.week_38.UseVisualStyleBackColor = true;
             // 
-            // label12
+            // week_37
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label12.Location = new System.Drawing.Point(409, 96);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(27, 18);
-            this.label12.TabIndex = 19;
-            this.label12.Text = "五";
+            this.week_37.Location = new System.Drawing.Point(78, 3);
+            this.week_37.Name = "week_37";
+            this.week_37.Size = new System.Drawing.Size(54, 38);
+            this.week_37.TabIndex = 2;
+            this.week_37.Text = "button43";
+            this.week_37.UseVisualStyleBackColor = true;
             // 
-            // label13
+            // week_36
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label13.Location = new System.Drawing.Point(484, 96);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(27, 18);
-            this.label13.TabIndex = 20;
-            this.label13.Text = "六";
+            this.week_36.Location = new System.Drawing.Point(3, 3);
+            this.week_36.Name = "week_36";
+            this.week_36.Size = new System.Drawing.Size(54, 38);
+            this.week_36.TabIndex = 0;
+            this.week_36.Text = "button44";
+            this.week_36.UseVisualStyleBackColor = true;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.week_35);
+            this.panel6.Controls.Add(this.week_34);
+            this.panel6.Controls.Add(this.week_33);
+            this.panel6.Controls.Add(this.week_32);
+            this.panel6.Controls.Add(this.week_31);
+            this.panel6.Controls.Add(this.week_30);
+            this.panel6.Controls.Add(this.week_29);
+            this.panel6.Location = new System.Drawing.Point(16, 302);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(512, 41);
+            this.panel6.TabIndex = 8;
+            // 
+            // week_35
+            // 
+            this.week_35.Location = new System.Drawing.Point(453, 3);
+            this.week_35.Name = "week_35";
+            this.week_35.Size = new System.Drawing.Size(54, 38);
+            this.week_35.TabIndex = 4;
+            this.week_35.Text = "button31";
+            this.week_35.UseVisualStyleBackColor = true;
+            // 
+            // week_34
+            // 
+            this.week_34.Location = new System.Drawing.Point(378, 3);
+            this.week_34.Name = "week_34";
+            this.week_34.Size = new System.Drawing.Size(54, 38);
+            this.week_34.TabIndex = 3;
+            this.week_34.Text = "button32";
+            this.week_34.UseVisualStyleBackColor = true;
+            // 
+            // week_33
+            // 
+            this.week_33.Location = new System.Drawing.Point(303, 3);
+            this.week_33.Name = "week_33";
+            this.week_33.Size = new System.Drawing.Size(54, 38);
+            this.week_33.TabIndex = 3;
+            this.week_33.Text = "button33";
+            this.week_33.UseVisualStyleBackColor = true;
+            // 
+            // week_32
+            // 
+            this.week_32.Location = new System.Drawing.Point(228, 3);
+            this.week_32.Name = "week_32";
+            this.week_32.Size = new System.Drawing.Size(54, 38);
+            this.week_32.TabIndex = 3;
+            this.week_32.Text = "button34";
+            this.week_32.UseVisualStyleBackColor = true;
+            // 
+            // week_31
+            // 
+            this.week_31.Location = new System.Drawing.Point(153, 3);
+            this.week_31.Name = "week_31";
+            this.week_31.Size = new System.Drawing.Size(54, 38);
+            this.week_31.TabIndex = 3;
+            this.week_31.Text = "button35";
+            this.week_31.UseVisualStyleBackColor = true;
+            // 
+            // week_30
+            // 
+            this.week_30.Location = new System.Drawing.Point(78, 3);
+            this.week_30.Name = "week_30";
+            this.week_30.Size = new System.Drawing.Size(54, 38);
+            this.week_30.TabIndex = 2;
+            this.week_30.Text = "button36";
+            this.week_30.UseVisualStyleBackColor = true;
+            // 
+            // week_29
+            // 
+            this.week_29.Location = new System.Drawing.Point(3, 3);
+            this.week_29.Name = "week_29";
+            this.week_29.Size = new System.Drawing.Size(54, 38);
+            this.week_29.TabIndex = 0;
+            this.week_29.Text = "button37";
+            this.week_29.UseVisualStyleBackColor = true;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.week_28);
+            this.panel5.Controls.Add(this.week_27);
+            this.panel5.Controls.Add(this.week_26);
+            this.panel5.Controls.Add(this.week_25);
+            this.panel5.Controls.Add(this.week_24);
+            this.panel5.Controls.Add(this.week_23);
+            this.panel5.Controls.Add(this.week_22);
+            this.panel5.Location = new System.Drawing.Point(16, 258);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(512, 41);
+            this.panel5.TabIndex = 7;
+            // 
+            // week_28
+            // 
+            this.week_28.Location = new System.Drawing.Point(453, 3);
+            this.week_28.Name = "week_28";
+            this.week_28.Size = new System.Drawing.Size(54, 38);
+            this.week_28.TabIndex = 4;
+            this.week_28.Text = "button24";
+            this.week_28.UseVisualStyleBackColor = true;
+            // 
+            // week_27
+            // 
+            this.week_27.Location = new System.Drawing.Point(378, 3);
+            this.week_27.Name = "week_27";
+            this.week_27.Size = new System.Drawing.Size(54, 38);
+            this.week_27.TabIndex = 3;
+            this.week_27.Text = "button25";
+            this.week_27.UseVisualStyleBackColor = true;
+            // 
+            // week_26
+            // 
+            this.week_26.Location = new System.Drawing.Point(303, 3);
+            this.week_26.Name = "week_26";
+            this.week_26.Size = new System.Drawing.Size(54, 38);
+            this.week_26.TabIndex = 3;
+            this.week_26.Text = "button26";
+            this.week_26.UseVisualStyleBackColor = true;
+            // 
+            // week_25
+            // 
+            this.week_25.Location = new System.Drawing.Point(228, 3);
+            this.week_25.Name = "week_25";
+            this.week_25.Size = new System.Drawing.Size(54, 38);
+            this.week_25.TabIndex = 3;
+            this.week_25.Text = "button27";
+            this.week_25.UseVisualStyleBackColor = true;
+            // 
+            // week_24
+            // 
+            this.week_24.Location = new System.Drawing.Point(153, 3);
+            this.week_24.Name = "week_24";
+            this.week_24.Size = new System.Drawing.Size(54, 38);
+            this.week_24.TabIndex = 3;
+            this.week_24.Text = "button28";
+            this.week_24.UseVisualStyleBackColor = true;
+            // 
+            // week_23
+            // 
+            this.week_23.Location = new System.Drawing.Point(78, 3);
+            this.week_23.Name = "week_23";
+            this.week_23.Size = new System.Drawing.Size(54, 38);
+            this.week_23.TabIndex = 2;
+            this.week_23.Text = "button29";
+            this.week_23.UseVisualStyleBackColor = true;
+            // 
+            // week_22
+            // 
+            this.week_22.Location = new System.Drawing.Point(0, 3);
+            this.week_22.Name = "week_22";
+            this.week_22.Size = new System.Drawing.Size(57, 38);
+            this.week_22.TabIndex = 0;
+            this.week_22.Text = "button30";
+            this.week_22.UseVisualStyleBackColor = true;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.week_21);
+            this.panel4.Controls.Add(this.week_20);
+            this.panel4.Controls.Add(this.week_19);
+            this.panel4.Controls.Add(this.week_18);
+            this.panel4.Controls.Add(this.week_17);
+            this.panel4.Controls.Add(this.week_16);
+            this.panel4.Controls.Add(this.week_15);
+            this.panel4.Location = new System.Drawing.Point(16, 211);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(512, 41);
+            this.panel4.TabIndex = 6;
+            // 
+            // week_21
+            // 
+            this.week_21.Location = new System.Drawing.Point(453, 3);
+            this.week_21.Name = "week_21";
+            this.week_21.Size = new System.Drawing.Size(54, 38);
+            this.week_21.TabIndex = 4;
+            this.week_21.Text = "button17";
+            this.week_21.UseVisualStyleBackColor = true;
+            // 
+            // week_20
+            // 
+            this.week_20.Location = new System.Drawing.Point(378, 3);
+            this.week_20.Name = "week_20";
+            this.week_20.Size = new System.Drawing.Size(54, 38);
+            this.week_20.TabIndex = 3;
+            this.week_20.Text = "button18";
+            this.week_20.UseVisualStyleBackColor = true;
+            // 
+            // week_19
+            // 
+            this.week_19.Location = new System.Drawing.Point(303, 3);
+            this.week_19.Name = "week_19";
+            this.week_19.Size = new System.Drawing.Size(54, 38);
+            this.week_19.TabIndex = 3;
+            this.week_19.Text = "button19";
+            this.week_19.UseVisualStyleBackColor = true;
+            // 
+            // week_18
+            // 
+            this.week_18.Location = new System.Drawing.Point(228, 3);
+            this.week_18.Name = "week_18";
+            this.week_18.Size = new System.Drawing.Size(54, 38);
+            this.week_18.TabIndex = 3;
+            this.week_18.Text = "button20";
+            this.week_18.UseVisualStyleBackColor = true;
+            // 
+            // week_17
+            // 
+            this.week_17.Location = new System.Drawing.Point(153, 3);
+            this.week_17.Name = "week_17";
+            this.week_17.Size = new System.Drawing.Size(54, 38);
+            this.week_17.TabIndex = 3;
+            this.week_17.Text = "button21";
+            this.week_17.UseVisualStyleBackColor = true;
+            // 
+            // week_16
+            // 
+            this.week_16.Location = new System.Drawing.Point(78, 3);
+            this.week_16.Name = "week_16";
+            this.week_16.Size = new System.Drawing.Size(54, 38);
+            this.week_16.TabIndex = 2;
+            this.week_16.Text = "button22";
+            this.week_16.UseVisualStyleBackColor = true;
+            // 
+            // week_15
+            // 
+            this.week_15.Location = new System.Drawing.Point(3, 3);
+            this.week_15.Name = "week_15";
+            this.week_15.Size = new System.Drawing.Size(54, 38);
+            this.week_15.TabIndex = 0;
+            this.week_15.Text = "button23";
+            this.week_15.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.week_14);
+            this.panel3.Controls.Add(this.week_13);
+            this.panel3.Controls.Add(this.week_12);
+            this.panel3.Controls.Add(this.week_11);
+            this.panel3.Controls.Add(this.week_10);
+            this.panel3.Controls.Add(this.week_9);
+            this.panel3.Controls.Add(this.week_8);
+            this.panel3.Location = new System.Drawing.Point(16, 164);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(512, 41);
+            this.panel3.TabIndex = 5;
+            // 
+            // week_14
+            // 
+            this.week_14.Location = new System.Drawing.Point(453, 3);
+            this.week_14.Name = "week_14";
+            this.week_14.Size = new System.Drawing.Size(54, 38);
+            this.week_14.TabIndex = 4;
+            this.week_14.Text = "button10";
+            this.week_14.UseVisualStyleBackColor = true;
+            // 
+            // week_13
+            // 
+            this.week_13.Location = new System.Drawing.Point(378, 3);
+            this.week_13.Name = "week_13";
+            this.week_13.Size = new System.Drawing.Size(54, 38);
+            this.week_13.TabIndex = 3;
+            this.week_13.Text = "button11";
+            this.week_13.UseVisualStyleBackColor = true;
+            // 
+            // week_12
+            // 
+            this.week_12.Location = new System.Drawing.Point(303, 3);
+            this.week_12.Name = "week_12";
+            this.week_12.Size = new System.Drawing.Size(54, 38);
+            this.week_12.TabIndex = 3;
+            this.week_12.Text = "button12";
+            this.week_12.UseVisualStyleBackColor = true;
+            // 
+            // week_11
+            // 
+            this.week_11.Location = new System.Drawing.Point(228, 3);
+            this.week_11.Name = "week_11";
+            this.week_11.Size = new System.Drawing.Size(54, 38);
+            this.week_11.TabIndex = 3;
+            this.week_11.Text = "button13";
+            this.week_11.UseVisualStyleBackColor = true;
+            // 
+            // week_10
+            // 
+            this.week_10.Location = new System.Drawing.Point(153, 3);
+            this.week_10.Name = "week_10";
+            this.week_10.Size = new System.Drawing.Size(54, 38);
+            this.week_10.TabIndex = 3;
+            this.week_10.Text = "button14";
+            this.week_10.UseVisualStyleBackColor = true;
+            // 
+            // week_9
+            // 
+            this.week_9.Location = new System.Drawing.Point(78, 3);
+            this.week_9.Name = "week_9";
+            this.week_9.Size = new System.Drawing.Size(54, 38);
+            this.week_9.TabIndex = 2;
+            this.week_9.Text = "button15";
+            this.week_9.UseVisualStyleBackColor = true;
+            // 
+            // week_8
+            // 
+            this.week_8.Location = new System.Drawing.Point(3, 3);
+            this.week_8.Name = "week_8";
+            this.week_8.Size = new System.Drawing.Size(57, 38);
+            this.week_8.TabIndex = 0;
+            this.week_8.Text = "button16";
+            this.week_8.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.week_7);
+            this.panel2.Controls.Add(this.week_6);
+            this.panel2.Controls.Add(this.week_5);
+            this.panel2.Controls.Add(this.week_4);
+            this.panel2.Controls.Add(this.week_3);
+            this.panel2.Controls.Add(this.week_2);
+            this.panel2.Controls.Add(this.week_1);
+            this.panel2.Location = new System.Drawing.Point(16, 117);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(512, 41);
+            this.panel2.TabIndex = 1;
+            // 
+            // week_7
+            // 
+            this.week_7.Location = new System.Drawing.Point(453, 3);
+            this.week_7.Name = "week_7";
+            this.week_7.Size = new System.Drawing.Size(54, 38);
+            this.week_7.TabIndex = 4;
+            this.week_7.Text = "button9";
+            this.week_7.UseVisualStyleBackColor = true;
+            // 
+            // week_6
+            // 
+            this.week_6.Location = new System.Drawing.Point(378, 3);
+            this.week_6.Name = "week_6";
+            this.week_6.Size = new System.Drawing.Size(54, 38);
+            this.week_6.TabIndex = 3;
+            this.week_6.Text = "button8";
+            this.week_6.UseVisualStyleBackColor = true;
+            // 
+            // week_5
+            // 
+            this.week_5.Location = new System.Drawing.Point(303, 3);
+            this.week_5.Name = "week_5";
+            this.week_5.Size = new System.Drawing.Size(54, 38);
+            this.week_5.TabIndex = 3;
+            this.week_5.Text = "button7";
+            this.week_5.UseVisualStyleBackColor = true;
+            // 
+            // week_4
+            // 
+            this.week_4.Location = new System.Drawing.Point(228, 3);
+            this.week_4.Name = "week_4";
+            this.week_4.Size = new System.Drawing.Size(54, 38);
+            this.week_4.TabIndex = 3;
+            this.week_4.Text = "button6";
+            this.week_4.UseVisualStyleBackColor = true;
+            // 
+            // week_3
+            // 
+            this.week_3.Location = new System.Drawing.Point(153, 3);
+            this.week_3.Name = "week_3";
+            this.week_3.Size = new System.Drawing.Size(54, 38);
+            this.week_3.TabIndex = 3;
+            this.week_3.Text = "button5";
+            this.week_3.UseVisualStyleBackColor = true;
+            // 
+            // week_2
+            // 
+            this.week_2.Location = new System.Drawing.Point(78, 3);
+            this.week_2.Name = "week_2";
+            this.week_2.Size = new System.Drawing.Size(54, 38);
+            this.week_2.TabIndex = 2;
+            this.week_2.Text = "button4";
+            this.week_2.UseVisualStyleBackColor = true;
+            // 
+            // week_1
+            // 
+            this.week_1.Location = new System.Drawing.Point(3, 3);
+            this.week_1.Name = "week_1";
+            this.week_1.Size = new System.Drawing.Size(54, 38);
+            this.week_1.TabIndex = 0;
+            this.week_1.Text = "button2";
+            this.week_1.UseVisualStyleBackColor = true;
             // 
             // 鬧鐘
             // 
@@ -946,12 +947,12 @@ namespace 鬧鐘
             this.Shown += new System.EventHandler(this.Form1_Shown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -979,53 +980,53 @@ namespace 鬧鐘
         private System.Windows.Forms.ComboBox m;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button button38;
-        private System.Windows.Forms.Button button39;
-        private System.Windows.Forms.Button button40;
-        private System.Windows.Forms.Button button41;
-        private System.Windows.Forms.Button button42;
-        private System.Windows.Forms.Button button43;
-        private System.Windows.Forms.Button button44;
+        private System.Windows.Forms.Button week_42;
+        private System.Windows.Forms.Button week_41;
+        private System.Windows.Forms.Button week_40;
+        private System.Windows.Forms.Button week_39;
+        private System.Windows.Forms.Button week_38;
+        private System.Windows.Forms.Button week_37;
+        private System.Windows.Forms.Button week_36;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button31;
-        private System.Windows.Forms.Button button32;
-        private System.Windows.Forms.Button button33;
-        private System.Windows.Forms.Button button34;
-        private System.Windows.Forms.Button button35;
-        private System.Windows.Forms.Button button36;
-        private System.Windows.Forms.Button button37;
+        private System.Windows.Forms.Button week_35;
+        private System.Windows.Forms.Button week_34;
+        private System.Windows.Forms.Button week_33;
+        private System.Windows.Forms.Button week_32;
+        private System.Windows.Forms.Button week_31;
+        private System.Windows.Forms.Button week_30;
+        private System.Windows.Forms.Button week_29;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.Button button26;
-        private System.Windows.Forms.Button button27;
-        private System.Windows.Forms.Button button28;
-        private System.Windows.Forms.Button button29;
-        private System.Windows.Forms.Button button30;
+        private System.Windows.Forms.Button week_28;
+        private System.Windows.Forms.Button week_27;
+        private System.Windows.Forms.Button week_26;
+        private System.Windows.Forms.Button week_25;
+        private System.Windows.Forms.Button week_24;
+        private System.Windows.Forms.Button week_23;
+        private System.Windows.Forms.Button week_22;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Button week_21;
+        private System.Windows.Forms.Button week_20;
+        private System.Windows.Forms.Button week_19;
+        private System.Windows.Forms.Button week_18;
+        private System.Windows.Forms.Button week_17;
+        private System.Windows.Forms.Button week_16;
+        private System.Windows.Forms.Button week_15;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button week_14;
+        private System.Windows.Forms.Button week_13;
+        private System.Windows.Forms.Button week_12;
+        private System.Windows.Forms.Button week_11;
+        private System.Windows.Forms.Button week_10;
+        private System.Windows.Forms.Button week_9;
+        private System.Windows.Forms.Button week_8;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button week_7;
+        private System.Windows.Forms.Button week_6;
+        private System.Windows.Forms.Button week_5;
+        private System.Windows.Forms.Button week_4;
+        private System.Windows.Forms.Button week_3;
+        private System.Windows.Forms.Button week_2;
+        private System.Windows.Forms.Button week_1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label YOUR;
         private System.Windows.Forms.ComboBox comboBox3;
