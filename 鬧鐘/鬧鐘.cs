@@ -24,6 +24,7 @@ namespace 鬧鐘
         music_management management;//音樂管理器
         List<Music_database> music = new List<Music_database>();//全部的音樂資料
         int day = -1;
+        Button[] Button_day = new Button[42];
         public 鬧鐘()
         {
             InitializeComponent();
@@ -37,10 +38,36 @@ namespace 鬧鐘
             comboBox1.Text = comboBox1.Items[0].ToString();
             日曆.Text = DateTime.Now.Date.ToString();
             // ShowDialog();
-            for (int i = DateTime.Now.Year; i < DateTime.Now.Year + 10; i++)
+            for (int i = 2015; i < DateTime.Now.Year + 10; i++)
                 comboBox2.Items.Add(i);
-            comboBox2.Text = comboBox2.Items[0].ToString();
-            comboBox3.Text = comboBox3.Items[0].ToString();
+            comboBox2.Text = DateTime.Now.Year.ToString();
+            comboBox3.Text = DateTime.Now.Month.ToString();
+            
+            int x = 19,y=80;
+            for(int i=0;i<Button_day.Length; i++)
+            {
+                Button_day[i] = new Button();
+                if (i != 0 && i % 7 == 0)
+                {
+                    y = y + 30;
+                    x = 19;
+                }
+                Button_day[i].SetBounds(x, y, 30, 30);
+                x = x + 100/2;
+                panel1.Controls.Add(Button_day[i]);
+            }
+            month Month = new month(Convert.ToInt32(comboBox2.Text), Convert.ToInt32(comboBox3.Text));
+            List<week> total_week = Month.git_total();//一個月全部的日期
+            int day1 = 0;
+            foreach (var i in total_week)
+            {
+                foreach (var j in i.git_data())
+                {
+                    Button_day[day1].Text = (j == 0) ? "" : j.ToString();
+                    day1++;
+                }
+            }
+            
         }
 
         private void notifyIcon1_DoubleClick(object sender, EventArgs e)
@@ -81,7 +108,7 @@ namespace 鬧鐘
             {
                 management = new music_management(music);
             }
-           
+            comboBox3_SelectedIndexChanged(sender,e);
         }
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)//關閉時觸發
         {
@@ -139,30 +166,8 @@ namespace 鬧鐘
                 }
             //////////////////////////////////////////////////////////////////////////////////
            
-            Button[,] button_total = new Button[,]
-            {  {week_1,week_2,week_3,week_4,week_5,week_6,week_7 },
-               {week_8,week_9,week_10,week_11,week_12,week_13,week_14 },
-               {week_15,week_16,week_17,week_18,week_19,week_20,week_21},
-               {week_22,week_23,week_24,week_25,week_26,week_27,week_28},
-               {week_29,week_30,week_31,week_32,week_33,week_34,week_35},
-               {week_36,week_37,week_38,week_39,week_40,week_41,week_42}
-            };
-            month Month = new month(Convert.ToInt32(comboBox2.Text), Convert.ToInt32(comboBox3.Text));
-            int j = 0;
-            for(int i = 0; i <= 5; i++)
-            {
-                for (int j1 = 0; j1 <= 6; j1++)
-                    button_total[i, j1].Text = "";
-            }
-            foreach (var i in Month.git_total())
-            {
-                for (int i1 = 0; i1 < i.git_week().Length; i1++)
-                {
-                    int[] x = i.git_data();
-                    button_total[j, i1].Text = (x[i1].ToString() == "0") ? "" : x[i1].ToString();
-                }
-                j++;
-            }
+            
+            
         }
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -212,6 +217,7 @@ namespace 鬧鐘
             listBox1.Items.Clear();
             foreach (var i in Alam)
                 listBox1.Items.Add(i.alarm_all_value());
+            comboBox3_SelectedIndexChanged(sender, e);
         }
 
         private void 隱藏到工具列_Click(object sender, EventArgs e)
@@ -235,6 +241,44 @@ namespace 鬧鐘
             listBox1.Items.Remove(listBox1.SelectedItem.ToString());//移除lsitbox的資料
             Alam.Remove(Alam[position]);//刪除資料庫的資料
             刪除.Enabled = false;
+            comboBox3_SelectedIndexChanged(sender, e);
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (var i in Button_day)
+            {
+                i.Text = "";
+                i.BackColor = Color.White;
+            }
+            month Month = new month(Convert.ToInt32(comboBox2.Text), Convert.ToInt32(comboBox3.Text));
+            List<week> total_week = Month.git_total();//一個月全部的日期
+            int day1 = 0;
+            foreach (var i in total_week)
+            {
+                foreach (var j in i.git_data())
+                {
+                    Button_day[day1].Text = (j == 0) ? "" : j.ToString();
+                   
+                    day1++;
+                }
+            }
+
+           foreach(var i in Alam)
+            {
+                if(i.Cycle.get_week_data().GetType().Name.ToString() == "DateTime")
+                {
+                    DateTime j=(DateTime)i.Cycle.get_week_data();
+                    foreach(var i1 in Button_day)
+                    {
+                        if(i1.Text== j.Day.ToString()&&j.Month.ToString()== comboBox3.Text&&
+                            comboBox2.Text == j.Year.ToString())
+                        {
+                            i1.BackColor= Color.GreenYellow;
+                        }
+                    }
+                }
+            }
         }
     }
 }

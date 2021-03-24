@@ -89,10 +89,6 @@ namespace 鬧鐘
         {
             return Weeks;
         }
-        public void button_print_week( )
-        {
-
-        }
 
     }
 

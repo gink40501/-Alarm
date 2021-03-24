@@ -48,8 +48,8 @@ namespace 鬧鐘
         [JsonProperty]
         private string must;
         public bool open_off;
-        [JsonProperty]
-        private cycle Cycle;
+        
+        public cycle Cycle;
         [JsonProperty]
         private int Hour;
         [JsonProperty]
@@ -165,6 +165,7 @@ namespace 鬧鐘
             open_off = true;
         }
 
+        
     }
     public class Music_database //音樂的資料庫的類別
     {
