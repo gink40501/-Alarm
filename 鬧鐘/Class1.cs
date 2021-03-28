@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace 鬧鐘
@@ -48,14 +49,14 @@ namespace 鬧鐘
         [JsonProperty]
         private string must;
         public bool open_off;
-        
+
         public cycle Cycle;
         [JsonProperty]
         private int Hour;
         [JsonProperty]
         private int Minute;
         [JsonProperty]
-        private int sec=0;
+        private int sec = 0;
         public ALARM()
         {
 
@@ -82,7 +83,7 @@ namespace 鬧鐘
             this.Cycle = new cycle(week);
         }
 
-        public void get_alarm_time(ref int Hour,ref int Minute)//回傳設定的鬧鐘時間
+        public void get_alarm_time(ref int Hour, ref int Minute)//回傳設定的鬧鐘時間
         {
             Hour = this.Hour;
             Minute = this.Minute;
@@ -107,8 +108,8 @@ namespace 鬧鐘
 
         public bool Alarm_()//核對時間是否一致
         {
-           //核對時間是否到時間
-            int NOW_Hour=DateTime.Now.Hour;
+            //核對時間是否到時間
+            int NOW_Hour = DateTime.Now.Hour;
             int NOW_Minute = DateTime.Now.Minute;
             int NOW_Sec = DateTime.Now.Second;
             if (Cycle.get_week_data().GetType().Name.ToString() == "DateTime")
@@ -118,13 +119,13 @@ namespace 鬧鐘
                 string DATA = 設定.Date.ToString();//設定的日期
                 if (date == DATA)
                 {
-                    if (NOW_Hour==Hour &&NOW_Minute==Minute&& NOW_Sec==sec)
+                    if (NOW_Hour == Hour && NOW_Minute == Minute && NOW_Sec == sec)
                         return true;
                 }
             }
             else
             {
-                
+
                 string now_Week = DateTime.Now.DayOfWeek.ToString();//now星期
                 string[] week = (string[])Cycle.get_week_data();
                 bool week_true_false = !(Array.IndexOf(week, now_Week) == -1);
@@ -165,7 +166,7 @@ namespace 鬧鐘
             open_off = true;
         }
 
-        
+
     }
     public class Music_database //音樂的資料庫的類別
     {
@@ -198,7 +199,7 @@ namespace 鬧鐘
         }
         public Music_database search_name(string music_name)//收尋功能名稱
         {
-           
+
             foreach (var i in Databases)
                 if (i.GetName() == music_name)//收尋音樂的名稱
                     return i;//回傳收尋到的整個物件
@@ -220,7 +221,7 @@ namespace 鬧鐘
             return Databases;
         }
     }
-    
+
 
 
     class holiday
@@ -229,6 +230,73 @@ namespace 鬧鐘
         public string datatime;//日期
         public int day;//時間
         public string annotation;//註解
+        public object work_day()
+        {
+            DateTime dateTime = new DateTime();
+            string[] vs = new string[] { "彈性放假", "補上班", "補班課" };
+
+            string DAY = annotation;
+            foreach (var i in vs)
+                if (date_string(DAY, i) != null)
+                    DAY = date_string(DAY, i);
+            if (annotation == DAY)
+                return null;
+            DateTime date;
+            string[] x = DAY.Split('/', '、');
+            if (x.Length != 2)
+            {
+                int math = Convert.ToInt32(x[2]);
+                int data_1 = Convert.ToInt32(x[3]);
+                date = new DateTime(DateTime.Now.Year, math, data_1, 0, 0, 0);
+                return date;
+            }
+            return null;
+            
+        }
+
+        private string date_string(string input, string j)
+        {
+
+            if (input.Contains(j) == true)
+            {
+                string[] total_day = Regex.Split(input, j);
+                string DAY = "";
+                foreach (var i in total_day)
+                    DAY = DAY + i;
+                return DAY;
+            }
+            return null;
+        }
+        public List<DateTime> rest(int your_1)
+        {
+            string[] vs = new string[] { "一", "二", "三", "四", "五", "六", "日", };
+            string DAY = datatime;
+            foreach (var i in vs)
+                if (date_string(DAY, i) != null)
+                    DAY = date_string(DAY, i);
+            string[] vs1 = DAY.Split('/', '-', ')', '(');
+
+            List<DateTime> date = new List<DateTime>();
+            for (int i = 0; i < vs1.Length; i = i + 2)
+                if (vs1[i] != "" && vs1[i + 1] != "")
+                    date.Add(new DateTime(your_1, Convert.ToInt32(vs1[i]), Convert.ToInt32(vs1[i + 1]),0 , 0, 0));
+            //int YEAR = DateTime.Now.Year;
+            //int Days = DateTime.DaysInMonth(YEAR, Convert.ToInt32(vs1[0]));
+            //for (int i = 1; i < day - 1; i++)
+            //{
+            //    int math = Convert.ToInt32(vs1[i]) + Convert.ToInt32(Convert.ToInt32(vs1[1]) / (Days+1));
+            //    if (math == 13) math = 1;
+            //    int data_1=((Convert.ToInt32(vs1[1]) + i) / (Days))+1;
+            //    if (data_1 == 0)
+            //    {
+            //        vs1[1] = vs1[1] + 1;
+            //        data_1 = 1;
+            //    }
+            //    date.Add(new DateTime(YEAR, math, data_1,0,0,0));
+            //}
+
+            return date;
+        }
     }
 
 }

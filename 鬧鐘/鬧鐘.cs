@@ -19,16 +19,17 @@ namespace 鬧鐘
 {
     public partial class 鬧鐘 : Form
     {
-        bool on_off=true;
+        bool on_off = true;
         NotifyIcon notifyIcon;
+        int YOUR_1 = DateTime.Now.Year;
         SoundPlayer player = new SoundPlayer();//音樂的撥放器
         dll sound = new dll();//控制user的dll
-        List<ALARM> Alam= new List<ALARM>();//鬧鐘的資料
+        List<ALARM> Alam = new List<ALARM>();//鬧鐘的資料
         music_management management;//音樂管理器
         List<Music_database> music = new List<Music_database>();//全部的音樂資料
         int day = -1;
         Button[] Button_day = new Button[42];
-        
+
         public 鬧鐘()
         {
             InitializeComponent();
@@ -46,9 +47,9 @@ namespace 鬧鐘
                 comboBox2.Items.Add(i);
             comboBox2.Text = DateTime.Now.Year.ToString();
             comboBox3.Text = DateTime.Now.Month.ToString();
-            
-            int x = 19,y=80;
-            for(int i=0;i<Button_day.Length; i++)
+
+            int x = 19, y = 80;
+            for (int i = 0; i < Button_day.Length; i++)
             {
                 Button_day[i] = new Button();
                 if (i != 0 && i % 7 == 0)
@@ -57,7 +58,7 @@ namespace 鬧鐘
                     x = 19;
                 }
                 Button_day[i].SetBounds(x, y, 30, 30);
-                x = x + 100/2;
+                x = x + 100 / 2;
                 panel1.Controls.Add(Button_day[i]);
             }
             month Month = new month(Convert.ToInt32(comboBox2.Text), Convert.ToInt32(comboBox3.Text));
@@ -71,7 +72,7 @@ namespace 鬧鐘
                     day1++;
                 }
             }
-           
+
         }
 
         private void notifyIcon1_DoubleClick(object sender, EventArgs e)
@@ -104,7 +105,7 @@ namespace 鬧鐘
                 music = JsonConvert.DeserializeObject<List<Music_database>>(total_music);//json檔案序列化
                 management = new music_management(music);
                 total_music_sw.Close();
-                foreach(var i in music)//將資料匯入music_TOTAL下拉式選單
+                foreach (var i in music)//將資料匯入music_TOTAL下拉式選單
                     music_TOTAL.Items.Add(i.GetName());
                 music_TOTAL.Text = music[0].GetName();
             }
@@ -112,11 +113,11 @@ namespace 鬧鐘
             {
                 management = new music_management(music);
             }
-            comboBox3_SelectedIndexChanged(sender,e);
+            comboBox3_SelectedIndexChanged(sender, e);
         }
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)//關閉時觸發
         {
-           
+
             StreamWriter sw = new StreamWriter("鬧鐘儲存資料.json");
             //Process.Start("https://www.youtube.com/watch?v=rGPXugD0ekU&ab_channel=%E8%A6%AA%E8%A6%AA2o%E9%9F%B3%E6%A8%82L%C3%AEv%C3%8B%E3%80%90%E4%B8%AD%E6%96%87%E9%9F%B3%E6%A8%82%E3%80%91/");//開啟網頁
             //JsonSerializerSettings jsetting = new JsonSerializerSettings();
@@ -134,44 +135,45 @@ namespace 鬧鐘
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedItem.ToString()==comboBox1.Items[0].ToString())
+            if (comboBox1.SelectedItem.ToString() == comboBox1.Items[0].ToString())
             {
                 日曆.Enabled = false;
                 星期資料.Enabled = true;
             }
             else
             {
-               日曆.Enabled = true;
-               星期資料.Enabled = false; 
+                日曆.Enabled = true;
+                星期資料.Enabled = false;
             }
 
-           int now_day=Convert.ToInt32(DateTime.Now.Day.ToString());
+            int now_day = Convert.ToInt32(DateTime.Now.Day.ToString());
             if (now_day != day)
             {//這個功能是 主要過完一天所有的按鈕都要回復
-                day=now_day  ;
+                day = now_day;
                 foreach (var i in Alam)
                     i.recovery();
             }
 
             label3.Text = DateTime.Now.ToString();
-            foreach(var i in Alam)//核對時間
-                if (i.Alarm_()==true)
+            foreach (var i in Alam)//核對時間
+                if (i.Alarm_() == true)
                 {
-                    if (on_off==true) {
+                    if (on_off == true)
+                    {
                         sound.SetVol();
-                        for (int j1=0;j1<65;j1=j1+2)//把聲音大到音量100
+                        for (int j1 = 0; j1 < 65; j1 = j1 + 2)//把聲音大到音量100
                             sound.SetVol();
-                        var route= management.search_name(i.get_must());
-                        player.SoundLocation=route.GetPosition();//把音樂路徑匯入裡面
+                        var route = management.search_name(i.get_must());
+                        player.SoundLocation = route.GetPosition();//把音樂路徑匯入裡面
                         player.PlayLooping();
                         closs_miss.Enabled = true;
                         this.Show();
                     }
                 }
             //////////////////////////////////////////////////////////////////////////////////
-           
-            
-            
+
+
+
         }
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -179,13 +181,13 @@ namespace 鬧鐘
         }
         private void muiss_Click(object sender, EventArgs e)
         {
-            
+
             OpenFileDialog saveFileDialog1 = new OpenFileDialog();//開啟物件視窗
-            saveFileDialog1.Filter="WAV|*.wav";
+            saveFileDialog1.Filter = "WAV|*.wav";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 StreamReader sw = new StreamReader(@saveFileDialog1.FileName.ToString());//選取的物件
-                string name=saveFileDialog1.SafeFileName;//選取的物件名稱
+                string name = saveFileDialog1.SafeFileName;//選取的物件名稱
                 Music_database music = new Music_database(name, @saveFileDialog1.FileName.ToString());
 
                 music_TOTAL.Items.Add(music.GetName());//加入combobox
@@ -194,12 +196,12 @@ namespace 鬧鐘
         }
         private void 存資料_Click(object sender, EventArgs e)//全部的儲存資料
         {
-            
+
             var H = h.SelectedItem.ToString();
             var M = m.SelectedItem.ToString();
             string name_music = management.search_name(music_TOTAL.Text).GetName();//取得被選取的音樂資料
             cycle CYCLE;
-            if (comboBox1.Text.ToString()=="星期")//如果是選擇到星期
+            if (comboBox1.Text.ToString() == "星期")//如果是選擇到星期
             {
                 string[] week = new string[星期資料.CheckedItems.Count];//星期
                 int j = 0;
@@ -216,9 +218,9 @@ namespace 鬧鐘
                 ALARM newAlarm = new ALARM(Convert.ToInt32(H), Convert.ToInt32(M), name_music, true, 日曆.Value);
                 Alam.Add(newAlarm);
             }
-            
-           
-            
+
+
+
             listBox1.Items.Clear();
             foreach (var i in Alam)
                 listBox1.Items.Add(i.alarm_all_value());
@@ -233,7 +235,7 @@ namespace 鬧鐘
 
         private void closs_miss_Click(object sender, EventArgs e)
         {
-            for(int i=0; i<70/2;i++)
+            for (int i = 0; i < 70 / 2; i++)
                 sound.SetVol_dowon();
             player.Stop();
             closs_miss.Enabled = false;
@@ -264,22 +266,43 @@ namespace 鬧鐘
                 foreach (var j in i.git_data())
                 {
                     Button_day[day1].Text = (j == 0) ? "" : j.ToString();
-                   
+
                     day1++;
                 }
             }
 
-           foreach(var i in Alam)
+
+
+            foreach (var i in Show_Web())
             {
-                if(i.Cycle.get_week_data().GetType().Name.ToString() == "DateTime")
+                List<DateTime> j = i.rest(YOUR_1);
+                foreach (var day in j)
                 {
-                    DateTime j=(DateTime)i.Cycle.get_week_data();
-                    foreach(var i1 in Button_day)
+                    foreach (var button in Button_day)
                     {
-                        if(i1.Text== j.Day.ToString()&&j.Month.ToString()== comboBox3.Text&&
+                        if (button.Text == day.Day.ToString() && day.Month.ToString() == comboBox3.Text
+                           && comboBox2.Text == DateTime.Now.Year.ToString())
+                        {
+                            
+                            button.BackColor = Color.Yellow;
+                            break;
+                        }
+                    }
+                }
+            }
+
+
+            foreach (var i in Alam)
+            {
+                if (i.Cycle.get_week_data().GetType().Name.ToString() == "DateTime")
+                {
+                    DateTime j = (DateTime)i.Cycle.get_week_data();
+                    foreach (var i1 in Button_day)
+                    {
+                        if (i1.Text == j.Day.ToString() && j.Month.ToString() == comboBox3.Text &&
                             comboBox2.Text == j.Year.ToString())
                         {
-                            i1.BackColor= Color.GreenYellow;
+                            i1.BackColor = Color.GreenYellow;
                         }
                     }
                 }
@@ -287,9 +310,29 @@ namespace 鬧鐘
         }
         private List<holiday> Show_Web()
         {
+
+            
+            //string url1= "https://www.youtube.com/channel/UCvaTdHTWBGv3MKj3KVqJVCw";
+            //HttpWebRequest http= (HttpWebRequest)WebRequest.Create(url1);
+            //WebResponse response1 = http.GetResponse();
+            //Stream resStream1 = response1.GetResponseStream();
+            //StreamReader sr1 = new StreamReader(resStream1);
+            //string strfile1 = sr1.ReadToEnd();
+            //HtmlDocument htmlDoc1 = new HtmlDocument();
+            //htmlDoc1.LoadHtml(strfile1);
+            //foreach (var i in htmlDoc1.DocumentNode.SelectNodes("//script"))
+            //{
+            //    string ss = i.InnerText;
+            //    string x=i.InnerText;
+            //}
+
+
+
+
+
             // 獲取網頁原始碼
             string YEAR = DateTime.Now.Year.ToString();
-            string url = "http://www.stockq.org/taiwan/holiday"+ YEAR + ".php";
+            string url = "http://www.stockq.org/taiwan/holiday" + YOUR_1.ToString() + ".php";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             WebResponse response = request.GetResponse();
             Stream resStream = response.GetResponseStream();
@@ -331,8 +374,14 @@ namespace 鬧鐘
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
-           
+            foreach (var i in Show_Web())
+            {
+                if (i.work_day() != null)
+                    i.work_day();
+                i.rest(YOUR_1);
+            }
+
+
             Form1 form1 = new Form1(Show_Web());
             form1.Show();
         }

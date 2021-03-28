@@ -56,7 +56,6 @@ namespace 鬧鐘
             this.dataGridView1.RowTemplate.Height = 38;
             this.dataGridView1.Size = new System.Drawing.Size(800, 434);
             this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column1
             // 
