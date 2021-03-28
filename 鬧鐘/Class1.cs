@@ -220,6 +220,15 @@ namespace 鬧鐘
             return Databases;
         }
     }
+    
 
+
+    class holiday
+    {
+        public string Anniversary;//節慶
+        public string datatime;//日期
+        public int day;//時間
+        public string annotation;//註解
+    }
 
 }

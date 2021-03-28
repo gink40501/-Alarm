@@ -8,9 +8,12 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Media;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HtmlAgilityPack;
+using HtmlDocument = HtmlAgilityPack.HtmlDocument;
 
 namespace 鬧鐘
 {
@@ -25,6 +28,7 @@ namespace 鬧鐘
         List<Music_database> music = new List<Music_database>();//全部的音樂資料
         int day = -1;
         Button[] Button_day = new Button[42];
+        
         public 鬧鐘()
         {
             InitializeComponent();
@@ -67,7 +71,7 @@ namespace 鬧鐘
                     day1++;
                 }
             }
-            
+           
         }
 
         private void notifyIcon1_DoubleClick(object sender, EventArgs e)
@@ -175,6 +179,7 @@ namespace 鬧鐘
         }
         private void muiss_Click(object sender, EventArgs e)
         {
+            
             OpenFileDialog saveFileDialog1 = new OpenFileDialog();//開啟物件視窗
             saveFileDialog1.Filter="WAV|*.wav";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
@@ -279,6 +284,57 @@ namespace 鬧鐘
                     }
                 }
             }
+        }
+        private List<holiday> Show_Web()
+        {
+            // 獲取網頁原始碼
+            string YEAR = DateTime.Now.Year.ToString();
+            string url = "http://www.stockq.org/taiwan/holiday"+ YEAR + ".php";
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+            WebResponse response = request.GetResponse();
+            Stream resStream = response.GetResponseStream();
+            StreamReader sr = new StreamReader(resStream);
+            string strfile = sr.ReadToEnd();
+            HtmlDocument htmlDoc = new HtmlDocument();
+            htmlDoc.LoadHtml(strfile);
+            int j = 0;
+            int j1 = 0;
+            List<holiday> total_holiday = new List<holiday>();
+            total_holiday.Add(new holiday());
+            foreach (var i in htmlDoc.DocumentNode.SelectNodes("//html[1]/body[1]/table[1]/tr[1]/td[2]/table[1]/tr/td"))
+            {
+                if (j > 3)
+                {
+                    switch (j % 4)
+                    {
+                        case 0:
+                            total_holiday[j1].Anniversary = i.InnerText;
+                            break;
+                        case 1:
+                            total_holiday[j1].datatime = i.InnerText;
+                            break;
+                        case 2:
+                            total_holiday[j1].day = Convert.ToInt32(i.InnerText);
+                            break;
+                        case 3:
+                            total_holiday[j1].annotation = i.InnerText;
+                            total_holiday.Add(new holiday());
+                            j1++;
+                            break;
+                    }
+                }
+                j++;
+            }
+            total_holiday.RemoveAt(total_holiday.Count - 1);
+            return total_holiday;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+           
+            Form1 form1 = new Form1(Show_Web());
+            form1.Show();
         }
     }
 }
