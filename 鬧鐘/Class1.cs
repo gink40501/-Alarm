@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace 鬧鐘
@@ -229,6 +230,38 @@ namespace 鬧鐘
         public string datatime;//日期
         public int day;//時間
         public string annotation;//註解
+        public object work_day()
+        {
+            DateTime dateTime = new DateTime();
+            string[] vs = new string[] { "彈性放假", "補上班", "補班課" };
+
+            string DAY = annotation;
+            foreach(var i in vs)
+                if (date_string(DAY, i) != null)
+                    DAY = date_string(DAY, i);
+            if(annotation== DAY)
+                return null;
+            DateTime date;
+            string[] x=DAY.Split('/','、');
+            int math = Convert.ToInt32(x[2]);
+            int data_1 = Convert.ToInt32(x[3]);
+            date=new DateTime(DateTime.Now.Year, math, data_1, 0, 0, 0);
+            return date;
+        }
+
+        private string date_string(string input,string j)
+        {
+             
+            if (input.Contains(j)==true)
+            {
+                string[] total_day = Regex.Split(input, j);
+                string DAY = "";
+                foreach (var i in total_day)
+                    DAY = DAY + i;
+                return DAY;
+            }
+            return null;
+        }
     }
 
 }

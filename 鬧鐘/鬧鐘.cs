@@ -331,8 +331,9 @@ namespace 鬧鐘
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
-           
+            foreach (var i in Show_Web())
+                if (i.work_day() != null)
+                    i.work_day();
             Form1 form1 = new Form1(Show_Web());
             form1.Show();
         }
